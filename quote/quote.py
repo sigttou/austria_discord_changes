@@ -74,11 +74,11 @@ class Quote(commands.Cog):
     @commands.Cog.listener()
     async def on_reaction_add(self, reaction, user):
         """
-        1 disk emoji is storing the message
+        3 disk emoji is storing the message
         5 wastebasked emoji is deleting the quote
         """
         # 1x floppy disk = add quote
-        if reaction.emoji == "\U0001F4BE" and reaction.count == 1:
+        if reaction.emoji == "\U0001F4BE" and reaction.count == 3:
             return await self.add_quote(reaction.message, user)
 
         # 5x wastebasket = delete quote
